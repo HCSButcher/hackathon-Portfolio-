@@ -14,7 +14,9 @@
 body {
   font-family: "JetBrains Mono", monospace;
 }
-
+.dot {
+  color: #00ff99;
+}
 a {
   color: #fff;
   text-decoration: none;
@@ -64,7 +66,7 @@ a {
 
 .navbar ul li:hover a,
 .navbar ul li.active a {
-  color: #7cf03d;
+  color: #00ff99;
 }
 
 .home {
@@ -80,52 +82,12 @@ a {
   animation-delay: 1.6s;
 }
 
+.home .home-info span {
+  font-size: 20px;
+}
 .home-info h1 {
   font-size: 55px;
-  margin-top: -10px;
-}
-.home-info h2 {
-  display: inline-block;
-  font-size: 32px;
-  margin-top: -10px;
-}
-
-.home-info h2 span {
-  position: relative;
-  display: inline-block;
-  color: transparent;
-  -webkit-text-stroke: 0.7px #7cf03d;
-  animation: display-text 9s linear infinite;
-  animation-delay: calc(-3s * var(--i));
-}
-
-.home-info h2 span::before {
-  content: attr(data-text);
-  position: absolute;
-  width: 0;
-  border-right: 2px solid #7cf03d;
-  color: #7cf03d;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: fill-text 2s linear infinite;
-}
-
-@keyframes fill-text {
-  10%,
-  100% {
-    width: 0;
-  }
-  70%,
-  90% {
-    width: 100%;
-  }
-}
-
-@keyframes display-text {
-  25%,
-  100% {
-    display: none;
-  }
+  margin-top: 0px;
 }
 
 .home-info p {
@@ -141,10 +103,10 @@ a {
 .btn {
   display: inline-block;
   padding: 10px 30px;
-  background: #7cf03d;
-  border: 2px solid #7cf03d;
+  background: #00ff99;
+  border: 2px solid #00ff99;
   border-radius: 40px;
-  box-shadow: 0 0 10px #7cf03d;
+  box-shadow: 0 0 10px #00ff99;
   font-size: 16px;
   color: #1f242d;
   font-weight: 600;
@@ -153,7 +115,7 @@ a {
 
 .btn:hover {
   background: transparent;
-  color: #7cf03d;
+  color: #00ff99;
   box-shadow: none;
   cursor: pointer;
 }
@@ -165,10 +127,10 @@ a {
 .home-info .btn-sci .sci a {
   display: inline-flex;
   padding: 8px;
-  border: 2px solid #7cf03d;
+  border: 2px solid #00ff99;
   border-radius: 50%;
   font-size: 20px;
-  color: #7cf03d;
+  color: #00ff99;
   margin: 0 8px;
   transition: 0.5s;
   position: relative;
@@ -176,9 +138,9 @@ a {
 }
 
 .home-info .btn-sci .sci a:hover {
-  background: #7cf03d;
+  background: #00ff99;
   color: #1f242d;
-  box-shadow: 0 0 10px #7cf03d;
+  box-shadow: 0 0 10px #00ff99;
 }
 
 .home-img .img-box {
@@ -202,7 +164,7 @@ a {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: conic-gradient(transparent, transparent, transparent, #7cf03d);
+  background: conic-gradient(transparent, transparent, transparent, #00ff99);
   transform: rotate(0deg);
   animation: rotate-border 8s linear infinite;
 }
@@ -241,12 +203,12 @@ a {
 .bars-animation {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 500vh;
   display: flex;
   z-index: -1;
 }
 .bars-animation .bar {
-  width: 100%;
+  width: 500vh;
   height: 100%;
   background: #1f242d;
   transform: translateY(-100%);
@@ -257,5 +219,63 @@ a {
 @keyframes show-bars {
   100% {
     transform: translateY(0%);
+  }
+}
+
+section {
+  height: 100vh;
+  padding: 100px 20px 20px;
+}
+
+.about {
+  height: 100vh;
+  padding: 10rem 9% 0;
+  align-items: center;
+  gap: 50px;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  animation: show-content 1.5s linear forwards;
+  animation-delay: 1.6s;
+}
+.about-info h1 {
+  font-size: 55px;
+  margin-top: -10px;
+}
+
+.about-info h2 span {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: 0.7px #00ff99;
+  animation: display-text 9s linear infinite;
+  animation-delay: calc(-3s * var(--i));
+}
+
+.about-info h2 span::before {
+  content: attr(data-text);
+  position: absolute;
+  width: 0;
+  border-right: 2px solid #00ff99;
+  color: #00ff99;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: fill-text 2s linear infinite;
+}
+@keyframes fill-text {
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
+@keyframes display-text {
+  25%,
+  100% {
+    display: none;
   }
 }
