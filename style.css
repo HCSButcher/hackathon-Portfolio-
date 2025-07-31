@@ -81,7 +81,18 @@ a {
   animation: show-content 1.5s linear forwards;
   animation-delay: 1.6s;
 }
-
+.home-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.text-content {
+  flex: 1;
+  min-width: 300px;
+}
 .home .home-info span {
   font-size: 20px;
 }
@@ -208,8 +219,8 @@ a {
   z-index: -1;
 }
 .bars-animation .bar {
-  width: 500vh;
-  height: 100%;
+  width: 100vw;
+  height: 500vh%;
   background: #1f242d;
   transform: translateY(-100%);
   animation: show-bars 0.5s ease-in-out forwards;
@@ -277,5 +288,52 @@ section {
   25%,
   100% {
     display: none;
+  }
+}
+
+.stats {
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+.stats-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.stats-info li span {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.services-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+.services-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: auto;
+}
+@media (max-width: 890px) {
+  .home-info {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .home-img {
+    margin-bottom: 1.5rem;
+  }
+
+  .text-content {
+    text-align: center;
   }
 }
