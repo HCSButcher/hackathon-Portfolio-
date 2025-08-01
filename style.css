@@ -700,6 +700,7 @@ button:hover{
   background-color:#1f242d;
 }
 @media (max-width: 767px) {
+  /*home section responsiveness*/
   .home-info {
     flex-direction: column-reverse;
     align-items: center;
@@ -727,9 +728,11 @@ button:hover{
     gap:1rem;
     margin: 0rem 0rem -1rem;
   }
+  /*end of home section responsiveness*/
 }
 
 @media (min-width: 768px ) and (max-width: 1023px ){
+/*home section responsiveness*/
   .home-info{
     flex-direction: column-reverse;
     align-items:center;
@@ -745,9 +748,13 @@ button:hover{
     flex-wrap:wrap;
     gap: 1.5rem;
   }
+  /*end of home section responsiveness*/
+
+  
 }
 
 @media (min-width: 1024px) and (max-width: 1279px){
+  /*home section responsiveness*/
   .home-info{
     gap: 4rem;    
   }
@@ -757,5 +764,98 @@ button:hover{
   .home-img img{
     max-width: 100%;
     height: auto;
+  }
+  /* end of home section responsiveness*/
+}
+
+/* Responsive layout for .about section */
+@media (max-width: 1024px) {
+  .about-info {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .about-details {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-details-p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .about-details-ul ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+    list-style: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-info h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 0 -1rem;
+  }
+.about{
+  width:100%;
+  padding: 1rem 0rem 0rem;
+}
+  .about-info h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    flex-direction: column;
+    margin: 0 0 -1rem;    
+  }
+
+  .about-details-ul ul {
+    grid-template-columns: repeat(2fr 1fr);
+    text-align: center;
+     gap:0px;  
+       
+  }
+.about-details-ul strong{ 
+  font-size:20px;
+}
+  .about-details-ul li{
+  font-size:17px;
+  padding:10px;
+  margin: 0rem 0rem -1rem; 
+}
+
+  .about-details-p {
+    font-size: 15px;
+    word-spacing:none;
+    text-align:justify;
+    margin: -1rem; 
+   
+  }
+}
+
+@media (max-width: 480px) {
+  .about-info {
+    padding: 1.5rem 1rem;
+  }
+
+  .about-info h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-info h2 {
+    font-size: 1rem;
+  }
+
+  .about-details-p {
+    font-size: 0.9rem;
+  }
+
+  .about-details-ul ul {
+    gap: 1rem;
   }
 }
