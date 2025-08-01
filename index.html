@@ -231,7 +231,7 @@
               <a
                 href="https://github.com/HCSButcher/EaseRent"
                 class="portfolio-icon"
-                ><span class="p-arrow"> &darr;</span></a
+                ><span class="p-arrow"> &darr; </span></a
               > </span
             ><br />
             <p>Backend development using Node.js, Express, and MongoDB.</p>
@@ -268,8 +268,100 @@
       </div>
     </section>
 
-    <section id="contact">
-      <h3>contact</h3>
+    <section class="contact-section" id="contact">
+      <div class="contact-container">
+        <div class="contact-wrapper">
+          <!--Contact Form-->
+          <div class="contact-form-box">
+            <form
+              action="https://formspree.io/f/xzzvvnzb"
+              method="POST"
+              class="contact-form"
+            >
+              <h3 class="form-title">Let&apos;s work together</h3>
+              <p class="form-description">
+                Bring your ideas to me and i&apos;ll transform them into live
+                working projects
+              </p>
+              <div class="form-grid">
+                <input
+                  type="text"
+                  name="firstName"
+                  placeholder="First name"
+                  required
+                />
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="Last name"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="example@gmail.com"
+                  required
+                />
+                <input
+                  type="text"
+                  name="phoneNumber"
+                  placeholder="(+254) ..."
+                  required
+                />
+              </div>
+              <select name="service" id="service">
+                <option disabled selected>Select a service</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Mobile App Development">
+                  Mobile App Development
+                </option>
+                <option value="Web App Development">Web App Development</option>
+              </select>
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Type your message here"
+                rows="10"
+                required
+              ></textarea>
+
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+          <!--Contact info-->
+          <div class="contact-info">
+            <ul>
+              <li>
+                <div class="icon-box">
+                  <span><i class="fa-solid fa-phone"></i></span>
+                </div>
+                <div>
+                  <p class="label">Phone</p>
+                  <h3>(+254) 748092 687</h3>
+                </div>
+              </li>
+              <li>
+                <div class="icon-box">
+                  <span><i class="fa-solid fa-envelope"></i></span>
+                </div>
+                <div>
+                  <p class="label">Email</p>
+                  <h3>trevor254oduol@gmail.com</h3>
+                </div>
+              </li>
+              <li>
+                <div class="icon-box">
+                  <span><i class="fa-solid fa-location-dot"></i></span>
+                </div>
+                <div>
+                  <p class="label">Address</p>
+                  <h3>Nakuru, Kabarak 20157</h3>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
   </body>
 </html>
