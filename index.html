@@ -19,15 +19,36 @@
   </head>
   <body>
     <nav class="navbar">
+      <!-- Logo -->
       <a href="#" class="logo">Trevor <span class="dot">.</span></a>
+
+      <!-- Sidebar Toggle Checkbox (hidden) -->
+      <input type="checkbox" id="sidebar-toggle" hidden />
+
+      <!-- Toggle Button (visible on small screens only) -->
+      <label for="sidebar-toggle" class="sidebar-toggle-btn">☰</label>
+
+      <!-- Sidebar Reducer (visible only when toggle is checked on small screens) -->
+      <div class="sidebar-reducer">
+        <nav>
+          <a class="active" href="#">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <!-- Desktop Navigation Links (visible on large screens only) -->
       <ul>
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#services">services</a></li>
+        <li><a href="#services">Services</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">contact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+
     <div class="bars-animation">
       <div class="bar" style="--i: 6"></div>
       <div class="bar" style="--i: 5"></div>
@@ -57,7 +78,7 @@
           <div class="stats">
             <div class="stats-info">
               <ul>
-                <li><span>1</span> year of experience</li>
+                <li><span>1+</span> years of experience</li>
                 <li><span>4</span> projects completed</li>
                 <li><span>5</span> technologies</li>
                 <li><span>104</span> commits</li>
@@ -321,7 +342,7 @@
                 name="message"
                 id="message"
                 placeholder="Type your message here"
-                rows="10"
+                rows="5"
                 required
               ></textarea>
 
@@ -336,7 +357,7 @@
                   <span><i class="fa-solid fa-phone"></i></span>
                 </div>
                 <div>
-                  <p class="label">Phone</p>
+                  <p class="label">Phone:</p>
                   <h3>(+254) 748092 687</h3>
                 </div>
               </li>
@@ -345,7 +366,7 @@
                   <span><i class="fa-solid fa-envelope"></i></span>
                 </div>
                 <div>
-                  <p class="label">Email</p>
+                  <p class="label">Email:</p>
                   <h3>trevor254oduol@gmail.com</h3>
                 </div>
               </li>
@@ -354,7 +375,7 @@
                   <span><i class="fa-solid fa-location-dot"></i></span>
                 </div>
                 <div>
-                  <p class="label">Address</p>
+                  <p class="label">Address:</p>
                   <h3>Nakuru, Kabarak 20157</h3>
                 </div>
               </li>

@@ -44,6 +44,80 @@ a {
     opacity: 1;
   }
 }
+.sidebar-toggle-btn {
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  display: none;
+}
+
+.sidebar-reducer {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  background-color: #1f242d;
+  width: 200px;
+  height:30%;
+  display: none;
+  flex-direction: column;
+  padding: 1rem;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.sidebar-reducer nav a {
+  color: #fff;
+  font-size:20px;
+  text-decoration: none;
+  padding: 0.75rem 0;
+  display: block;
+  border-bottom: 1px solid #e5e7eb09;
+  text-align:right;
+}
+.sidebar-reducer nav a.active,
+.sidebar-reducer nav a:hover {
+  color: #00ff99;
+}
+
+
+/* Show reducer when checkbox is checked */
+.navbar #sidebar-toggle:checked ~ .sidebar-reducer {
+  display: flex;
+}
+
+/* Show toggle button on small screens, hide navbar links */
+@media (max-width: 1023px) {
+  .navbar ul {
+    display: none !important ;
+  }
+  .sidebar-toggle-btn {
+    display: block; /* <-- THIS is what was missing */
+  }
+}
+
+
+/* Hide sidebar toggle and reducer on large screens */
+@media (min-width: 1024px) {
+  .navbar ul {
+    display: flex;
+  }
+
+  .sidebar-reducer {
+    display: none !important;
+  }
+
+  .sidebar-toggle-btn {
+    display: none;
+  }
+
+  #sidebar-toggle {
+    display: none;
+  }
+}
+
 
 .navbar .logo {
   font-size: 30px;
@@ -69,6 +143,7 @@ a {
 .navbar ul li.active a {
   color: #00ff99;
 }
+
 
 .home {
   display: flex;
@@ -241,7 +316,7 @@ section {
 
 .about {
   height: 100vh;
-  padding: 10rem 9% 0;
+  padding: 5rem 9% 0;
   align-items: center;
   gap: 50px;
   color: #fff;
@@ -251,8 +326,8 @@ section {
   animation-delay: 1.6s;
 }
 .about-info h1 {
-  font-size: 55px;
-  margin-top: -10px;
+  font-size: 30px;
+  margin: 1rem 1rem 0rem;  
 }
 .about-info h2{
 padding: 1rem; 
@@ -479,7 +554,7 @@ max-width:2000px;
 
 .card p{
   font-size:17px;
-  padding: 20px 0px 20px;
+  padding: 18px 0px 18px;
   margin: 0rem 1rem;
   
 }
@@ -487,7 +562,7 @@ max-width:2000px;
 .list{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
-  gap:16px; 
+  gap:10px; 
   list-style: none;
   padding: 0; 
   font-size: 20px;
@@ -511,15 +586,13 @@ max-width:2000px;
 }
 
 .contact-container{ 
-  width:1500px; 
-  margin:auto;
-  padding: 4rem 2rem; 
+  width:1500px;
+  margin: 0rem 9% 0rem;
 }
 .contact-wrapper{
   display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:1rem;
-  margin:2rem;
+  grid-template-columns: 1fr 1fr;  
+ 
 }
 
 .contact-section{  
@@ -531,7 +604,7 @@ max-width:2000px;
   display:flex;
   flex-direction:column;
   gap:1.5rem;
-  padding: 2rem; 
+  padding: 20% 2%; 
 }
 .icon-box{
   padding: 1rem 1rem 1rem ;
@@ -546,6 +619,9 @@ max-width:2000px;
   align-items:center;
   margin-right:1rem;
 }
+.label{
+  font-size:20px;
+}
 .icon-box:hover{
   background-color: #00ff99;
   color: #1f242d;
@@ -559,7 +635,7 @@ max-width:2000px;
   background-color: #e5e7eb09;
   border: 2px solid #e5e7eb18;
   border-radius: 1.5rem;
-  padding: 2rem;
+  padding: 1rem;
   border-radius:24px;
   flex:1;
   width:600px;
@@ -613,26 +689,73 @@ textarea{
 }
 button{
   padding:15px;
+  font-size: 18px;
   border:2px solid #00ff99;
   background-color: #00ff99;
-  border-radius:0.5rem;
+  border-radius:2rem;
   margin: 1rem 0rem 0rem;
 }
 button:hover{
   color:#00ff99;
   background-color:#1f242d;
 }
-@media (max-width: 890px) {
+@media (max-width: 767px) {
   .home-info {
     flex-direction: column-reverse;
     align-items: center;
+    text-align:center;
+    gap:1rem;
+    
   }
-
   .home-img {
-    margin-bottom: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    margin-top: 2rem;
   }
+.text-content h1{
+  font-size: 35px;
+}
+  .text-content,
+  .stats-info {
+    width: 100%;
+    gap:-1rem;
+  }
+  .btn-sci{
+    flex-direction:column;
+    align-items:center;
+    gap:1rem;
+    margin: 0rem 0rem -1rem;
+  }
+}
 
-  .text-content {
-    text-align: center;
+@media (min-width: 768px ) and (max-width: 1023px ){
+  .home-info{
+    flex-direction: column-reverse;
+    align-items:center;
+    text-align:center;
+    gap:2.5rem;
+  }
+  .home-img{
+    justify-content:center;
+    margin-top: 2rem;
+  }
+  .btn-sci{
+    justify-content: center;
+    flex-wrap:wrap;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px){
+  .home-info{
+    gap: 4rem;    
+  }
+  .text-content{
+    padding: 0 2rem;
+  }
+  .home-img img{
+    max-width: 100%;
+    height: auto;
   }
 }
