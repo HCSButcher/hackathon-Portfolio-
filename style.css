@@ -792,6 +792,9 @@ button:hover{
 }
 
 @media (min-width: 770px ) and (max-width: 1440px ){
+ .navbar{
+  width:90%;
+ }
   .home{
     width:87%;
      padding: 60px 2% 0;
