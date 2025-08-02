@@ -945,6 +945,33 @@ padding: 1px
   margin: -0.5rem 0 -0.5rem;
 }
 /*portfolio responsiveness section*/
+  .container{
+    width: 100%;
+    padding: 5rem 5% 0;
+  }
+  .grid-custom{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    
+  }
+  .card{
+    padding: 1rem;
+    
+
+  }
+  .left-column{
+    height:200px;    
+    width: 100%;
+    overflow-y:auto;
+    box-sizing:border-box;
+    
+    
+  }
+  .right-column, .card{
+    height: 200px;
+    width: 50%;
+  }
   
 }
 
