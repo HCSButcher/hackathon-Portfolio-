@@ -240,8 +240,8 @@ a {
   margin-left: 30px;
  width: 32vw;
 height: 32vh;
-max-height:400px;
-max-width: 400px;
+max-height:300px;
+max-width: 300px;
   border-radius: 50%;
   padding: 5px;
   display: flex;
@@ -2259,7 +2259,7 @@ input{
   }
 
   .contact-info ul {
-    margin: -5rem 0 -3rem;
+    margin: -8rem 0 -3rem;
     gap: 1rem;
     font-size: 14px;
   }
