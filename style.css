@@ -2021,7 +2021,7 @@ input{
 
 }
 
-@media (min-width:344px) and (min-width:882px){
+@media (min-width:344px) and (max-width:882px){
   /* Home section */
   .home-info {
     flex-direction: column-reverse;
