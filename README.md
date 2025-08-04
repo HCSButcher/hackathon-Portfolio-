@@ -1,6 +1,6 @@
 # Contact Form Website
 
-This is a responsive contact form built using **pure HTML and CSS**, with form submission handled via **Formspree**. The site is deployed on **Netlify** and allows users to submit their information and messages directly to the site owner without using any JavaScript.
+This is a responsive contact form built using **pure HTML and CSS**, with form submission handled via **Formspree**. The site is deployed on **Netlify** link (https://prismatic-sprite-3400ad.netlify.app/) and allows users to submit their information and messages directly to the site owner without using any JavaScript.
 
 ## 🚀 Features
 
