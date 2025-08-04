@@ -80,7 +80,7 @@ a {
   padding: 0.75rem 0;
   display: block;
   border-bottom: 1px solid #e5e7eb09;
-  text-align:right;
+  text-align:left;
 }
 .sidebar-reducer nav a.active,
 .sidebar-reducer nav a:hover {
